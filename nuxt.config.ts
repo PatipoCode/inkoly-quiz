@@ -46,6 +46,12 @@ export default defineNuxtConfig({
       callback: '/auth/callback',
       exclude: ['/', '/join', '/play/**', '/screen/**'],
     },
+
+    // Ім'я файлу відрізняється від дефолтного (database.types.ts) навмисно:
+    // суфікс .generated. видно в дифі й підказує, що руками його не правлять.
+    // Без цього рядка модуль тихо підставляє Database = unknown, і всі
+    // виклики .from()/.rpc() перестають типізуватись — помилка не видима.
+    types: '~/types/database.generated.ts',
   },
 
   i18n: {
