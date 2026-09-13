@@ -44,6 +44,10 @@ async function signIn() {
 
       <NuxtLink to="/join" class="link">{{ $t('join.title') }}</NuxtLink>
     </div>
+
+    <DevOnly>
+      <DevSignIn v-if="!user" />
+    </DevOnly>
   </main>
 </template>
 

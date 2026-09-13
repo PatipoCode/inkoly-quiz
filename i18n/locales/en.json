@@ -13,7 +13,11 @@
   "auth": {
     "signInWithGoogle": "Sign in with Google",
     "signingIn": "Signing you in…",
-    "signOut": "Sign out"
+    "signOut": "Sign out",
+    "signIn": "Sign in",
+    "email": "Email",
+    "password": "Password",
+    "devSignIn": "Developer sign-in"
   },
   "dashboard": {
     "title": "My quizzes",
