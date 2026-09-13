@@ -21,7 +21,9 @@
     "db:start": "supabase start",
     "db:stop": "supabase stop",
     "db:reset": "supabase db reset",
-    "db:types": "supabase gen types typescript --local > app/types/database.generated.ts",
+    "db:push": "supabase db push",
+    "db:types": "supabase gen types typescript --linked > app/types/database.generated.ts",
+    "db:types:local": "supabase gen types typescript --local > app/types/database.generated.ts",
     "prepare": "husky"
   },
   "dependencies": {
@@ -52,6 +54,7 @@
     "lint-staged": "^17.5.1",
     "prettier": "^3.9.6",
     "sass-embedded": "^1.104.1",
+    "supabase": "^2.117.0",
     "typescript": "~5.9.3",
     "vitest": "^5.0.0",
     "vue-tsc": "^3.3.11"

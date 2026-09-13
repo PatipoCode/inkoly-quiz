@@ -18,7 +18,8 @@
   "dashboard": {
     "title": "My quizzes",
     "empty": "No quizzes yet",
-    "create": "New quiz"
+    "create": "New quiz",
+    "untitled": "Untitled quiz"
   },
   "editor": {
     "title": "Quiz editor",
