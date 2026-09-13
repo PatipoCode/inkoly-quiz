@@ -1,7 +1,10 @@
 # Підключення Supabase
 
-Код і міграція вже в репозиторії. Тут — кроки, які треба зробити руками:
-вони потребують вашого браузера, пароля бази і доступу до Google Cloud Console.
+Код і міграція вже в репозиторії.
+
+**Кроки 1–3 виконано.** Проєкт `Inkoly Quiz` створено у Frankfurt (eu-central-1),
+ref `qjlztmlyfmfppcyuxfrk`, схема накочена. Лишився крок 4 — Google OAuth:
+він потребує доступу до Google Cloud Console.
 
 Локальна розробка працює без жодного з них: `npm run db:start` піднімає власний
 стек у Docker з демо-квізом і тестовим ведучим (див. кінець файлу).
@@ -13,7 +16,7 @@
 ```bash
 npx supabase login                      # відкриє браузер
 npx supabase projects list              # звіряємо ref і РЕГІОН
-npx supabase link --project-ref <ref>   # спитає пароль бази
+npx supabase link --project-ref qjlztmlyfmfppcyuxfrk   # спитає пароль бази
 ```
 
 ⚠️ **Перевірте регіон одразу.** PRD §10.3 вимагає Frankfurt (eu-central) —
@@ -38,7 +41,7 @@ npm run db:types     # регенерує app/types/database.generated.ts з lin
 `.env` (у git не потрапляє), значення з Dashboard → Project Settings → API:
 
 ```
-SUPABASE_URL=https://<ref>.supabase.co
+SUPABASE_URL=https://qjlztmlyfmfppcyuxfrk.supabase.co
 SUPABASE_KEY=<anon / publishable key>
 ```
 
@@ -53,7 +56,7 @@ Create credentials → OAuth client ID → Web application.
 Authorized redirect URIs — додайте обидва рядки до одного клієнта:
 
 ```
-https://<ref>.supabase.co/auth/v1/callback
+https://qjlztmlyfmfppcyuxfrk.supabase.co/auth/v1/callback
 http://127.0.0.1:54321/auth/v1/callback
 ```
 
