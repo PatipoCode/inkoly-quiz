@@ -1,0 +1,43 @@
+/**
+ * Міксини. Доступні в кожному <style lang="scss"> автоматично —
+ * див. vite.css.preprocessorOptions.scss у nuxt.config.ts.
+ *
+ * Тут не може бути нічого, що генерує CSS: файл підключається до кожного
+ * блоку стилів, і будь-яке правило продублюється стільки ж разів.
+ */
+
+/// Видимий фокус — вимога §14.1, однакова на всіх трьох поверхнях.
+@mixin focus-ring {
+  outline: var(--focus-ring-width) solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+/// Інтерактивний елемент з гарантованою тач-ціллю 44 × 44 px (§14.1).
+@mixin touchable {
+  min-block-size: var(--touch-target);
+  min-inline-size: var(--touch-target);
+
+  &:focus-visible {
+    @include focus-ring;
+  }
+}
+
+/// Доступно скрінрідеру, приховано візуально.
+@mixin visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/// Обрізання довгого тексту — імена учасників обмежені 20 символами (§9.4),
+/// але переклади й назви квізів не обмежені нічим.
+@mixin truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

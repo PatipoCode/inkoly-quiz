@@ -1,0 +1,7 @@
+.nuxt
+.output
+dist
+node_modules
+supabase/.branches
+supabase/.temp
+app/types/database.generated.ts

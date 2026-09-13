@@ -1,0 +1,11 @@
+npx lint-staged
+
+# Міграція і згенеровані типи мають лежати в одному коміті.
+# Інакше app/types/database.generated.ts мовчки розходиться зі схемою:
+# компілятор про це не дізнається, а помилка спливе в рантаймі партії.
+staged=$(git diff --cached --name-only)
+if echo "$staged" | grep -q '^supabase/migrations/' && ! echo "$staged" | grep -q '^app/types/database.generated.ts$'; then
+  echo "✗ У коміті є міграція, але немає app/types/database.generated.ts."
+  echo "  Виконайте: npm run db:types && git add app/types/database.generated.ts"
+  exit 1
+fi

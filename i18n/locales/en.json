@@ -1,0 +1,73 @@
+{
+  "app": {
+    "name": "Inkoly Quiz",
+    "tagline": "Home quiz nights, on the big screen"
+  },
+  "common": {
+    "loading": "Loading…",
+    "retry": "Try again",
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "comingSoon": "Coming soon"
+  },
+  "auth": {
+    "signInWithGoogle": "Sign in with Google",
+    "signingIn": "Signing you in…",
+    "signOut": "Sign out"
+  },
+  "dashboard": {
+    "title": "My quizzes",
+    "empty": "No quizzes yet",
+    "create": "New quiz"
+  },
+  "editor": {
+    "title": "Quiz editor",
+    "lockedBanner": "This quiz is being played right now — editing is disabled",
+    "lockedBannerLink": "Open the live room"
+  },
+  "host": {
+    "title": "Host controls",
+    "startQuestion": "Start question",
+    "closeQuestion": "Close question",
+    "next": "Next",
+    "answeredBy": "Answered ({count}/{total})"
+  },
+  "screen": {
+    "waitingForPlayers": "Waiting for players",
+    "joinAt": "Join at {url}",
+    "roomCode": "Room code",
+    "answered": "{count} of {total} answered",
+    "timeUp": "Time's up"
+  },
+  "join": {
+    "title": "Enter room code",
+    "codePlaceholder": "6-digit code",
+    "submit": "Join",
+    "notFound": "No room with that code"
+  },
+  "play": {
+    "chooseName": "Your name",
+    "chooseAvatar": "Pick an avatar",
+    "nameTaken": "That name is already taken in this room",
+    "nameTooLong": "Names are limited to {max} characters",
+    "avatarTaken": "That avatar is already taken",
+    "waitingForStart": "Waiting for the host to start",
+    "answerSubmitted": "Answer submitted",
+    "yourScore": "Your score"
+  },
+  "leaderboard": {
+    "title": "Leaderboard",
+    "rank": "#",
+    "player": "Player",
+    "score": "Score",
+    "totalTime": "Time"
+  },
+  "admin": {
+    "title": "Admin",
+    "placeholder": "Nothing here in phase 1"
+  },
+  "errors": {
+    "connectionLost": "Connection lost — reconnecting…",
+    "generic": "Something went wrong"
+  }
+}

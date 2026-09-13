@@ -1,0 +1,37 @@
+@use 'tokens';
+@use 'typography';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-block: 0;
+}
+
+:focus-visible {
+  @include focus-ring;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
